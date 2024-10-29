@@ -1,10 +1,12 @@
 import express from 'express'
 import sqlite3 from 'sqlite3'
 import bcrypt, { hash } from 'bcrypt'
+import cors from 'cors'
 
 const app = express()
 
 app.use(express.json()) //permitir que a requisição
+app.use(cors()) //corrige cors origin
 
 const router = express.Router()
 
